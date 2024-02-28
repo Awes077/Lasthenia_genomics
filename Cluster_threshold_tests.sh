@@ -28,16 +28,16 @@ sed -i '/\[15] /c\1 ## [15]' params-Lasthenia_L1R2.txt
 ipyrad -p params-Lasthenia_L1R2.txt -s 12 -c ${SLURM_NTASKS} -f
 
 #create branches for one mismatch and two mismatches with barcode 
-ipyrad -b clust90 -p params-LastheniaL1R2.txt -f
-sed -i '/\[14] /c\0.9 ## [14]' params-Lasthenia_L1R2.txt
-ipyrad -b clust92 -p params-LastheniaL1R2.txt -f
-sed -i '/\[14] /c\0.92 ## [14]' params-Lasthenia_L1R2.txt
-ipyrad -b clust94 -p params-LastheniaL1R2.txt -f
-sed -i '/\[14] /c\0.94 ## [14]' params-Lasthenia_L1R2.txt
-ipyrad -b clust96 -p params-LastheniaL1R2.txt -f
-sed -i '/\[14] /c\0.96 ## [14]' params-Lasthenia_L1R2.txt
-ipyrad -b clust98 -p params-LastheniaL1R2.txt -f
-sed -i '/\[14] /c\0.98 ## [14]' params-Lasthenia_L1R2.txt
+ipyrad -p params-Lasthenia_L1R2.txt -b clust90 -f
+sed -i '/\[14] /c\0.9 ## [14]' params-clust90.txt
+ipyrad -p params-Lasthenia_L1R2.txt -b clust92 -f
+sed -i '/\[14] /c\0.92 ## [14]' params-clust92.txt
+ipyrad -p params-Lasthenia_L1R2.txt -b clust94 -f
+sed -i '/\[14] /c\0.94 ## [14]' params-clust94.txt
+ipyrad -b clust96 -p params-Lasthenia_L1R2.txt -f
+sed -i '/\[14] /c\0.96 ## [14]' params-clust96.txt
+ipyrad -b clust98 -p params-Lasthenia_L1R2.txt -f
+sed -i '/\[14] /c\0.98 ## [14]' params-clust98.txt
 
 
 
